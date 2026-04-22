@@ -84,13 +84,46 @@ There are 350+ skills installed from multiple repos (gstack, phuryn, deanpeters,
 Custom merged skills live in project `.claude/skills/` or `PM Ops/.claude/skills/` depending on whether they're project-specific or universal.
 
 ### PM skills available globally
-All skills in `~/.claude/skills/` are available in every project. Key ones:
-- **Discovery:** `discovery-interview-prep`, `jobs-to-be-done`, `opportunity-solution-tree`, `user-personas`
-- **Strategy:** `product-strategy`, `positioning-workshop`, `swot-analysis`, `recommendation-canvas`
-- **Execution:** `create-prd`, `sprint-plan`, `stakeholder-map`, `pre-mortem`, `brainstorm-okrs`
-- **Metrics:** `metrics-dashboard`, `north-star-metric`, `ab-test-analysis`, `cohort-analysis`
-- **Interview prep:** `interview-prep` (work real → synthesis → mock)
-- **Reviews:** `/review [engineer|designer|exec|sales|customer-success|legal|data]`
+All skills in `~/.claude/skills/` are available in every project. 350+ installed across these domains:
+
+**Discovery & Research**
+`discovery-interview-prep`, `interview-script`, `summarize-interview`, `jobs-to-be-done`, `opportunity-solution-tree`, `user-personas`, `proto-persona`, `discovery-process`, `customer-journey-map`, `customer-journey-mapping-workshop`, `desk-researcher-agent`, `research-lookup`
+
+**Strategy & Positioning**
+`product-strategy`, `product-vision`, `positioning-workshop`, `positioning-statement`, `recommendation-canvas`, `swot-analysis`, `pestle-analysis`, `ansoff-matrix`, `porters-five-forces`, `lean-canvas`, `business-model`, `startup-canvas`, `altitude-horizon-framework`, `problem-framing-canvas`
+
+**Execution & Delivery**
+`create-prd`, `prd-development`, `epic-hypothesis`, `epic-breakdown-advisor`, `user-story`, `user-story-mapping`, `user-story-splitting`, `sprint-plan`, `outcome-roadmap`, `roadmap-planning`, `stakeholder-map`, `pre-mortem`, `prioritize-features`, `prioritization-advisor`, `release-notes`, `wwas`
+
+**OKRs & Metrics**
+`brainstorm-okrs`, `pm-okrs`, `metrics-dashboard`, `north-star-metric`, `ab-test-analysis`, `cohort-analysis`, `sql-queries`, `product-analytics`
+
+**GTM & Growth**
+`gtm-strategy`, `gtm-motions`, `beachhead-segment`, `ideal-customer-profile`, `competitive-battlecard`, `competitor-analysis`, `market-sizing`, `tam-sam-som-calculator`, `growth-loops`, `launch-strategy`, `referral-program`
+
+**Marketing** *(full ecosystem — use `marketing-ops` as router)*
+`marketing-ops`, `marketing-context`, `content-strategy`, `content-production`, `copywriting`, `seo-audit`, `ai-seo`, `paid-ads`, `email-sequence`, `social-content`, `page-cro`, `onboarding-cro`, `pricing-strategy`, `campaign-analytics`
+
+**Finance & Business Acumen**
+`saas-revenue-growth-metrics`, `saas-economics-efficiency-metrics`, `finance-based-pricing-advisor`, `finance-metrics-quickref`, `financial-analyst`, `saas-metrics-coach`, `feature-investment-advisor`, `business-health-diagnostic`
+
+**Design & UX**
+`design-review`, `design-consultation`, `ui-ux-pro-max`, `lean-ux-canvas`, `storyboard`, `customer-journey-map`, `user-segmentation`
+
+**Engineering & Technical**
+`senior-architect`, `senior-frontend`, `senior-backend`, `senior-fullstack`, `api-design-reviewer`, `mcp-server-builder`, `ci-cd-pipeline-builder`, `tdd-guide`, `playwright-pro`, `self-improving-agent`
+
+**C-Level Advisory**
+`ceo-advisor`, `cto-advisor`, `cfo-advisor`, `cpo-advisor`, `cmo-advisor`, `coo-advisor`, `board-deck-builder`, `chief-of-staff`, `founder-coach`, `strategic-alignment`, `scenario-war-room`
+
+**Leadership & Career**
+`director-readiness-advisor`, `vp-cpo-readiness-advisor`, `executive-onboarding-playbook`, `product-sense-interview-answer`, `interview-prep`
+
+**Project Management**
+`sprint-plan`, `scrum-master`, `senior-pm`, `jira-expert`, `confluence-expert`, `meeting-analyzer`, `stakeholder-map`
+
+**Reviews & Safety**
+`review` *(personas: engineer / designer / exec / sales / customer-success / legal / data)*, `plan-ceo-review`, `plan-eng-review`, `plan-design-review`, `autoplan`, `pre-mortem`, `careful`, `guard`
 
 ---
 
