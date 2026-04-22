@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# Generated reports (large files, project-specific)
+reports/
+
+# Claude local settings (machine-specific)
+.claude/settings.local.json
+
+# Auto-generated
+skills-inventory.csv
+market-research-reports.skill
+
+# VS Code workspace
+*.code-workspace
