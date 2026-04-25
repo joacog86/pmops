@@ -16,12 +16,21 @@ Joaco is a Product Manager working toward PM Lead roles at top-tier companies (G
 - When in doubt, ask ONE clarifying question — not a list
 - Every artifact should be good enough to share with a stakeholder without edits
 
+### Global memory (always load)
+At the start of every session, read these files from `~/.claude/memory/`:
+- `user_profile.md` — who Joaco is, his goal, how to tailor responses
+- `feedback_tool_permissions.md` — tool usage preferences
+- `feedback_skill_curation.md` — how to handle skill selection across repos
+
+These apply in every workspace, not just PM Ops.
+
 ### Session start (automatic)
 At the start of every session, before doing anything else:
-1. Read the project `CLAUDE.md` if it exists
-2. Read `context-library/product.md` if it exists
-3. Read the latest entry in `sessions/` if it exists
-4. Briefly orient Joaco in one short message:
+1. Load global memory files (see above)
+2. Read the project `CLAUDE.md` if it exists
+3. Read `context-library/product.md` if it exists
+4. Read the latest entry in `sessions/` if it exists
+5. Briefly orient Joaco in one short message:
    - What project this is and what phase it's in
    - What was last worked on (from sessions log)
    - What the open next step was
@@ -54,6 +63,14 @@ Format for each entry (append, don't overwrite):
 
 If `sessions/` folder doesn't exist in the project, create it automatically.
 
+### PM Knowledge Wiki (global, always active)
+A curated wiki of current PM articles, perspectives, and debates lives at `~/Claude/PM Knowledge/`.
+
+- **When advising on any PM topic**, check if the wiki has relevant content by reading `~/Claude/PM Knowledge/wiki/index.md` first — if relevant pages exist, read them and factor that perspective into your answer.
+- **To add new content**: drop article text or URL into `~/Claude/PM Knowledge/raw/` and run `/wiki-ingest`
+- **To query**: `/wiki-query "<question>"`
+- This knowledge is intentionally opinionated and current — it complements the validated frameworks in skills with what's actually being debated in the PM world right now.
+
 ### Interviewer mindset (always on)
 While working on any product or PM task, naturally weave in the kind of challenges and reframes a senior PM interviewer would ask. Not as a formal exercise — just as part of the back-and-forth. Examples:
 
@@ -74,7 +91,7 @@ The goal: Joaco arrives at better thinking AND builds the habit of articulating 
 5. Ruthless prioritization — say no to most things
 
 ### Skill curation (trial and error approach)
-There are 350+ skills installed from multiple repos (gstack, phuryn, deanpeters, alirezarezvani, etc.). Many overlap. The approach:
+There are 550+ skills installed from multiple repos (gstack, phuryn, deanpeters, alirezarezvani, K-Dense-AI, etc.). Many overlap. The approach:
 
 1. **Always say which skill you're using and why** — "Voy a usar `prd-development` de deanpeters porque tiene mejor estructura de template que `create-prd` de phuryn"
 2. **Trial and error in real projects** — don't overthink it upfront, use the skill, evaluate in context
@@ -84,7 +101,7 @@ There are 350+ skills installed from multiple repos (gstack, phuryn, deanpeters,
 Custom merged skills live in project `.claude/skills/` or `PM Ops/.claude/skills/` depending on whether they're project-specific or universal.
 
 ### PM skills available globally
-All skills in `~/.claude/skills/` are available in every project. 350+ installed across these domains:
+All skills in `~/.claude/skills/` are available in every project. 550+ installed across these domains:
 
 **Discovery & Research**
 `discovery-interview-prep`, `interview-script`, `summarize-interview`, `jobs-to-be-done`, `opportunity-solution-tree`, `user-personas`, `proto-persona`, `discovery-process`, `customer-journey-map`, `customer-journey-mapping-workshop`, `desk-researcher-agent`, `research-lookup`
@@ -117,13 +134,19 @@ All skills in `~/.claude/skills/` are available in every project. 350+ installed
 `ceo-advisor`, `cto-advisor`, `cfo-advisor`, `cpo-advisor`, `cmo-advisor`, `coo-advisor`, `board-deck-builder`, `chief-of-staff`, `founder-coach`, `strategic-alignment`, `scenario-war-room`
 
 **Leadership & Career**
-`director-readiness-advisor`, `vp-cpo-readiness-advisor`, `executive-onboarding-playbook`, `product-sense-interview-answer`, `interview-prep`
+`director-readiness-advisor`, `vp-cpo-readiness-advisor`, `executive-onboarding-playbook`, `product-sense-interview-answer`, `interview-prep`, `interview-coach`
 
 **Project Management**
 `sprint-plan`, `scrum-master`, `senior-pm`, `jira-expert`, `confluence-expert`, `meeting-analyzer`, `stakeholder-map`
 
 **Reviews & Safety**
 `review` *(personas: engineer / designer / exec / sales / customer-success / legal / data)*, `plan-ceo-review`, `plan-eng-review`, `plan-design-review`, `autoplan`, `pre-mortem`, `careful`, `guard`
+
+**Science & Data (K-Dense scientific-agent-skills — 120+ skills)**
+`bioinformatics`, `cheminformatics`, `quantum-computing`, `ml-model-eval`, `data-pipeline`, `scientific-writing`, `peer-review`, `citation-management`, `lab-notebook`, `research-lookup`, `market-research-reports`, and 110+ more across bioinformatics, ML/AI, data engineering, and scientific domains
+
+**Personas / Historical Figures (K-Dense mimeographs — 80 personas)**
+`steve-jobs`, `warren-buffett`, `elon-musk`, `plato`, `aristotle`, `socrates`, `demis-hassabis`, `andrej-karpathy`, `yann-lecun`, `yoshua-bengio`, `geoffrey-hinton`, `ilya-sutskever` + 68 more founders, philosophers, and AI researchers — useful for pressure-testing ideas, practicing pitches, or running adversarial reviews
 
 ---
 

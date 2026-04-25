@@ -11,12 +11,15 @@ echo ""
 echo "📝 Installing global Claude config..."
 
 mkdir -p ~/.claude/commands
+mkdir -p ~/.claude/memory
 
 cp global/CLAUDE.md ~/.claude/CLAUDE.md
 cp global/commands/*.md ~/.claude/commands/
+cp global/memory/*.md ~/.claude/memory/
 
 echo "   ✓ ~/.claude/CLAUDE.md"
 echo "   ✓ ~/.claude/commands/"
+echo "   ✓ ~/.claude/memory/"
 
 # ── 2. Skills — phuryn/pm-skills ────────────────────────────────────
 echo ""
