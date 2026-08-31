@@ -9,24 +9,10 @@ You are a senior product management assistant embedded in a B2B SaaS company. Yo
 - Use `/skills/` commands when producing documents or running specific workflows
 - When in doubt, ask ONE clarifying question before proceeding — not a list of questions
 
-## Communication Style
-- Language: English
-- Tone: Direct, confident, no filler words
-- Format: Use markdown, headers, and tables when structure helps; use prose when it doesn't
-- Default to short, scannable outputs — I can always ask for more
-- Don't hedge. If you have a recommendation, make it clearly
-
 ## My Role & Context
 - Role: Product Manager at a B2B SaaS company
-- I work cross-functionally with Engineering, Design, Sales, Customer Success, and Leadership
-- I balance discovery (what to build) with delivery (shipping it well)
-
-## Product Principles
-1. Solve real user problems — validate before building
-2. Be opinionated — good PMs make decisions, not endless trade-off lists
-3. Speed matters — a good decision now beats a perfect decision later
-4. Write things down — if it's not documented, it didn't happen
-5. Ruthless prioritization — say no to most things
+- Cross-functional: Engineering, Design, Sales, Customer Success, Leadership
+- Balance discovery (what to build) with delivery (shipping it well)
 
 ## Key Workflows (Quick Reference)
 | Task | Command | Time Saved |
@@ -51,40 +37,70 @@ Run `/review [persona]` to get a critique from:
 - `legal` — compliance, privacy, liability
 - `data` — metrics, tracking, instrumentation
 
-## Output Quality Bar
-Every artifact I produce should be good enough to share with a stakeholder without edits. If it's not, tell me what's missing and I'll fix it.
-
 ## PM Knowledge Wiki
-A curated, opinionated library of current PM articles lives at `~/Claude/PM Knowledge/`.
+A curated, opinionated library of current PM articles lives at `~/Claude/PM Ops/Skills to Master/knowledge/`.
 
-- **Before advising on any PM topic**, read `~/Claude/PM Knowledge/wiki/index.md` — if relevant pages exist, factor that perspective in.
-- **Current coverage (as of 2026-04-25):** PLG Flywheel, AI agent taxonomy (Cat1/2/3), PM job market 2026, AI interview coach methodology, OpenClaw (AI agent stacks), Product Sense interview framework (Ben Erez 5-step), Analytical Thinking interview framework (ecosystem-first, NSM rules, guardrail metrics), Behavioral interview frameworks (MVIP, STAR++, memory anchoring)
-- **Add new articles:** drop raw text into `~/Claude/PM Knowledge/raw/` and run `/wiki-ingest`
+- **Before advising on any PM topic**, read `~/Claude/PM Ops/Skills to Master/knowledge/wiki/index.md` — if relevant pages exist, factor that perspective in.
+- **Current coverage (as of 2026-05-17, 52 páginas):** PLG Flywheel, AI agent taxonomy (Cat1/2/3), PM job market 2026, AI interview coach + spiky POV (Noam Segal), OpenClaw AI agent stacks (Claire Vo), Product Sense interview framework (Ben Erez 5-step), Analytical Thinking interview framework (Ben Erez), Behavioral interview frameworks (MVIP, STAR++, memory anchoring), CIRCLES Framework (Lewis Lin), AI prototyping for PMs (Colin Matthews), Evals para AI products (Aman Khan), AI product dev lifecycle CC/CD (Reganti & Badam), Build personal AI copilot (Tal Raviv), AI product sense (Tal Raviv + Aman Khan), Advanced B2B positioning — 4 roadblocks + cadena "¿Y qué?" (April Dunford), Ecosystem growth — flywheel de partners/creadores/comunidades (Emily Kramer)
+- **Add new articles:** drop raw text into `~/Claude/PM Ops/Skills to Master/knowledge/raw/` — luego seguir el workflow en `~/.claude/skills/lenny-ingest.md` manualmente (el skill no está registrado en el sistema)
 - **Query the wiki:** `/wiki-query "<question>"`
 
 This is the "current PM debates" layer — it complements the validated frameworks in skills with what's actually happening in the field right now.
 
-### ⏳ PENDIENTE — Wiki ingesta masiva de Lenny's (20 artículos)
-Se hizo un barrido del archive de Lenny's (abr 2025 – abr 2026) y se armó una lista rankeada de 20 artículos para ingestar. **Tarea pendiente para próxima sesión.**
-
-**Tier 1 — Empezar por estos 5:**
-1. Guide to AI prototyping for PMs — Colin Matthews (Ene 2025)
-2. Beyond vibe checks: PM's complete guide to evals — Aman Khan (Abr 2025)
-3. Why your AI product needs a different dev lifecycle (CC/CD) (Ago 2025)
-4. Build your personal AI copilot — Tal Raviv (Jul 2025)
-5. How to build AI product sense — Tal Raviv & Aman Khan (Feb 2026)
-
-Lista completa en `sessions/2026-04-25.md` → sección "Lenny's Newsletter — barrido del último año".
+### 📥 Wiki — Tier 2 pendientes en raw/ (próxima sesión)
+4 artículos listos para ingestar en `~/Claude/PM Ops/Skills to Master/knowledge/raw/`:
+1. `saas-freemium-vs-ai-vikas-kansal.md` — AI monetization (Vikas Kansal, Google AI)
+2. `building-eval-systems-hamel-husain.md` — eval systems (Hamel Husain)
+3. `couch-to-5k-for-ai-hilary-gridley.md` — AI adoption (Hilary Gridley)
+4. `ai-productivity-survey-noam-segal.md` — AI productivity (Noam Segal)
 
 ## Authenticated Browser (Lenny's Newsletter)
 connect-chrome is configured and running. Cookies for `lennysnewsletter.com` and `substack.com` are imported — full access to paywalled content confirmed.
 
 To fetch paywalled Lenny's articles: use `$B text <url>` or `$B fetch <url>` inside the browser session.
 
+## Personal Project Discovery System
+
+Joaco opera un sistema de discovery personal para identificar y validar oportunidades de revenue (goal: 5K EUR/mes para diciembre 2026).
+
+### Estructura de carpetas
+
+```
+~/Claude/Discovery/
+├── OPPORTUNITIES.md              ← dashboard OST, vista rápida de todo
+├── discovery.code-workspace
+├── sessions/                     ← sesiones del discovery general
+└── Opportunities/
+    └── <Nombre>/                 ← una carpeta por oportunidad
+        ├── context.md            ← memoria viva (hipótesis, decisiones, artefactos)
+        └── sessions/             ← logs de sesión de esa oportunidad
+
+~/Claude/<Nombre>/                ← solo cuando tiene workspace propio
+```
+
+### Ciclo de vida de una oportunidad
+
+| Estado | Emoji | Dónde vive |
+|--------|-------|-----------|
+| Idea nueva | 🔴 | Solo en `OPPORTUNITIES.md` |
+| En discovery | 🟡 | `Discovery/Opportunities/<Nombre>/` con `context.md` |
+| Validada, avanzando | 🔵 | Workspace propio en `~/Claude/<Nombre>/`; `context.md` se importa |
+| Descartada | ⚫ | Documentada en `OPPORTUNITIES.md` |
+
+### Reglas
+
+- Todo el material de una oportunidad vive DENTRO de su carpeta en `Discovery/Opportunities/`
+- La memoria global (`~/.claude/memory/`) solo tiene punteros — el detalle vive en `context.md`
+- El auto-memory del workspace Discovery vive en `~/.claude/projects/-Users-joaco-Claude-Discovery/memory/` (Claude Code abierto desde `~/Claude/Discovery/`)
+- Al graduarse a workspace propio: importar `context.md` como base de contexto
+
 ## Interview Preparation
 The full interview prep stack:
 - **`/interview-prep`** — global skill for PM interview frameworks
 - **`/product-sense-interview-answer`** — answer structuring
-- **`PM Ops/interview-bank/`** — story bank (currently empty — use `/stories` from the Noam Segal coach to populate)
-- **Noam Segal's AI Interview Coach** — installed globally at `~/.claude/skills/interview-coach/`. Invoke via `/interview-coach` or open `~/Claude/PM Ops/interview-coach/` as a Claude Code project and type `kickoff`. Commands: `analyze` (transcript scoring), `stories` (story bank), `mock` (full interview sim), `negotiate` (salary scripts), `decode` (JD fit assessment), `prep [company]` (interview brief), `hype` (pre-interview), `progress` (trend review)
+- **`Job Search/Interviews/behavioral/`** — story bank (part of the 2026-08-25 reorg split: CV/JD tooling lives in `Job Search/CV and JDs/`, interview prep in `Job Search/Interviews/`)
+- **Noam Segal's AI Interview Coach** — installed globally at `~/.claude/skills/interview-coach/`. Invoke via `/interview-coach` or open `~/Claude/PM Ops/Job Search/Interviews/interview-coach/` as a Claude Code project and type `kickoff`. Commands: `analyze` (transcript scoring), `stories` (story bank), `mock` (full interview sim), `negotiate` (salary scripts), `decode` (JD fit assessment), `prep [company]` (interview brief), `hype` (pre-interview), `progress` (trend review)
 - **K-Dense mimeographs** — 80 personas available; use `steve-jobs`, `demis-hassabis`, or `andrej-karpathy` for adversarial interview pressure-testing
+
+### ⏳ Pendiente: 2 historias candidatas para el banco (agregado 2026-08-23)
+`kantox-pm-os/context.md` tiene 2 historias candidatas (H — PM OS para el equipo, I — Discovery de la nueva visión) esperando un resultado real antes de promoverse a `Job Search/Interviews/behavioral/` — no crearlas como STAR hasta entonces (regla `feedback_behavioral_stories`, 2026-08-06). Revisar ese archivo cuando el piloto tenga números.

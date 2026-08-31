@@ -1,6 +1,9 @@
 # macOS
 .DS_Store
 
+# Local sync/upload cache (not project content, not created by us)
+.tmp.driveupload/
+
 # Generated reports (large files, project-specific)
 reports/
 
@@ -14,3 +17,9 @@ market-research-reports.skill
 # VS Code workspace
 *.code-workspace
 .gstack/
+
+# Private job-search data (CVs, transcripts, coaching notes) — never public.
+# Was its own separate git repo (pm-interview-agent) for a cloud-agent
+# scheduler; disabled 2026-08-25, now plain files, kept out of this repo
+# via this ignore instead. (Folder renamed interviews/ -> Job Search/ same day.)
+Job Search/
