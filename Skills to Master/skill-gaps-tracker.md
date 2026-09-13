@@ -14,6 +14,22 @@ Long-term development plan, built from real gaps surfaced by actual JDs Joaco ha
 | PSD2 / MiCA regulatory frameworks (EU-specific KYC/AML) | Spendesk — Senior PM KYC & AML (2026-08-25) | JD wants "working knowledge of KYC/AML regulatory frameworks — ideally EU or UK" | The *skill* (translating regulation into product decisions) transfers directly from BCRA/IOL — it's the specific EU regulatory body knowledge that's missing, not the underlying competency. |
 | Power BI (real depth, not just listed) | Recurring — N26 OAE skill-gap-map (2026-08-06), several JDs since | Listed as a skill on the CV with no bullet evidencing depth | Per `feedback_cv_writing`: don't oversell. Decide consciously — refresh with real practice, or own "known tool, not expert" in conversation. Still undecided as of 2026-08-25. |
 
+## Active build — AI evaluation (added 2026-09-08)
+
+**The gap:** knowing how to tell whether an AI feature actually *works* — hallucination, bias, silent errors, quality, tone, trust, and the handoffs between steps. Not "have I used LLMs", but "can I evaluate one in production".
+
+**Where it came from:** Factorial's JD (Senior PM, Barcelona) makes it their central bet, in unusually specific language:
+
+> *"You can make AI reliable, not just impressive: You understand LLM capabilities and failure modes (hallucination, bias, silent errors), and you've either shipped AI to production or thought rigorously about how to evaluate whether it truly works — quality, tone, trust, the handoffs. This is our core bet; it matters here more than almost anywhere."*
+
+Joaco's read: *"esto lo tengo que saber hacer... es un skill a trabajar."*
+
+**Why it isn't closeable by study:** same shape as the N26 OAE agentic-systems gap. Reading about evals doesn't produce evidence; running them on something real does.
+
+**Where it gets closed:** **The Playmaker / InversionCockpit**, on the AI Council Chat — five investor personas answering simultaneously. That's LLM in production, with real users, where answer quality already matters to the product. Building evals there serves the product and closes the gap in one move. Noted in that project's own backlog (`InversionCockpit/context.md` → Next Steps → Pendientes de CLAUDE, 2026-09-08) so it gets picked up in that workspace rather than living only here.
+
+**Status of the Factorial application:** parked by Joaco 2026-09-08. The CV is built if he wants it later.
+
 ## Structural / long-term (different track, not a study session)
 
 | Gap | First surfaced | What it would actually take | Verdict impact |

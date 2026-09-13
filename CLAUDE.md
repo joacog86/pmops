@@ -99,6 +99,7 @@ The full interview prep stack:
 - **`/interview-prep`** — global skill for PM interview frameworks
 - **`/product-sense-interview-answer`** — answer structuring
 - **`Job Search/Interviews/behavioral/`** — story bank (part of the 2026-08-25 reorg split: CV/JD tooling lives in `Job Search/CV and JDs/`, interview prep in `Job Search/Interviews/`)
+- **Notas de producto** (`Interviews/kantox-hedging-engine.md`, `Interviews/xepelin-credit-model.md`) — cómo funciona la máquina por dentro, para "contame qué hacés hoy" y para las repreguntas técnicas. No son STAR y no van en `behavioral/`; están indexadas en `Interviews/README.md`
 - **Noam Segal's AI Interview Coach** — installed globally at `~/.claude/skills/interview-coach/`. Invoke via `/interview-coach` or open `~/Claude/PM Ops/Job Search/Interviews/interview-coach/` as a Claude Code project and type `kickoff`. Commands: `analyze` (transcript scoring), `stories` (story bank), `mock` (full interview sim), `negotiate` (salary scripts), `decode` (JD fit assessment), `prep [company]` (interview brief), `hype` (pre-interview), `progress` (trend review)
 - **K-Dense mimeographs** — 80 personas available; use `steve-jobs`, `demis-hassabis`, or `andrej-karpathy` for adversarial interview pressure-testing
 
